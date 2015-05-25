@@ -13,3 +13,4 @@ urlpatterns = patterns('',
     url(r'^index2/', 'dashboard.views.index2', name='dashboard_index2'),
     url(r'^admin/', include(admin.site.urls)),
 )
+
