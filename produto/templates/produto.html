@@ -1,0 +1,48 @@
+{% block content %}
+
+<div class="row">
+    <div id="breadcrumb" class="col-md-12">
+        <ol class="breadcrumb">
+            <li><a href="index.html">Inicio</a></li>
+        </ol>
+    </div>
+</div>
+
+<form action="." method="post">{% csrf_token %}
+    <div class="row">
+        <div class="col-xs-12 col-sm-12">
+            <div class="box">
+                <div class="box-content">
+                    <h4 class="page-header">Produtos</h4>
+                    <form class="form-horizontal" role="form">
+                    <table class="table table-hover">
+                        <thead>
+                            <tr>
+                                <th>ID</th>
+                                <th>Descrição</th>
+                                <th>Tamanho</th>
+                                <th>Cor</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+
+                        {% if produtos %}
+                            {% for Produto in produtos %}
+                                <tr>
+                                    <td>{{ produtos.idProduto }}</td>
+                                    <td>{{ produtos.deDescricao }}</td>
+                                    <td>produtos.idTamanho</td>
+                                    <td>produtos.deCor</td>
+                                </tr>
+                            {% endfor %}
+                        {% endif %}
+
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+{% endblock %}

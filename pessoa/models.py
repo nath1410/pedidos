@@ -58,3 +58,4 @@ class Endereco(models.Model):
         deBairro = models.CharField(max_length = 30)
         idCidade = models.ForeignKey(inicio.models.Cidade)
 
+
