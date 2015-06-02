@@ -15,25 +15,27 @@
                 <div class="box-content">
                     <h4 class="page-header">Produtos</h4>
                     <form class="form-horizontal" role="form">
-                    <table class="table table-hover">
+                    <table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-3">
                         <thead>
                             <tr>
                                 <th>ID</th>
                                 <th>Descrição</th>
                                 <th>Tamanho</th>
                                 <th>Cor</th>
+                                <th>Editar</th>
                             </tr>
                         </thead>
                         <tbody>
 
                         {% if produtos %}
-                            {% for Produto in produtos %}
+                            {% for produto in produtos %}
                                 <tr>
-                                    <td>{{ produtos.idProduto }}</td>
-                                    <td>{{ produtos.deDescricao }}</td>
-                                    <td>produtos.idTamanho</td>
-                                    <td>produtos.deCor</td>
-                                </tr>
+                                    <td>{{ produto.idProduto }}</td>
+                                    <td>{{ produto.deProduto }}</td>
+                                    <td>{{ produto.idTamanho.deTamanho }}</td>
+                                    <td>{{ produto.deCor }}</td>
+                                    <td><a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a></td>
+                                    </tr>
                             {% endfor %}
                         {% endif %}
 

@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    {% load staticfiles %}
+  {% load staticfiles %}
   <head>
     <meta charset="utf-8">
     <title>Pedidos</title>
@@ -136,14 +136,6 @@
                 <li><a class="ajax-link" href="{% static "produto.html" %}">Produtos</a></li>
                 <li><a class="ajax-link" href="produto">Produtos OK</a></li>
                 <li><a class="ajax-link" href="{% static "pedido.html" %}">Pedidos</a></li>
-
-                {% if pais %}
-                    {% for Pais in pais %}
-                          <li><a class="ajax-link" href="produto">{{ pais.idPais }}</a></li>
-                          <li><a class="ajax-link" href="produto">{{ produtos.dePais }}</a></li>
-                    {% endfor %}
-                {% endif %}
-
               </ul>
             </li>
           </ul>
