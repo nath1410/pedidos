@@ -7,6 +7,7 @@
     <meta name="description" content="description">
     <meta name="author" content="Nathan Lusa">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
     <link href="{% static "plugins/bootstrap/bootstrap.css" %}" rel="stylesheet">
     <link href="{% static "plugins/jquery-ui/jquery-ui.min.css" %}" rel="stylesheet">
     <link href="http://netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css" rel="stylesheet">
@@ -16,6 +17,7 @@
     <link href="{% static "plugins/xcharts/xcharts.min.css" %}" rel="stylesheet">
     <link href="{% static "plugins/select2/select2.css" %}" rel="stylesheet">
     <link href="{% static "css/style.css" %}" rel="stylesheet">
+
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
         <script src="http://getbootstrap.com/docs-assets/js/html5shiv.js"></script>
@@ -54,7 +56,7 @@
       <div class="container-fluid expanded-panel">
         <div class="row">
           <div id="logo" class="col-xs-12 col-sm-2">
-            <a href="index.html">Pedidos</a>
+            <a href="">Pedidos</a>
           </div>
           <div id="top-panel" class="col-xs-12 col-sm-10">
 
@@ -121,7 +123,7 @@
         <div id="sidebar-left" class="col-xs-2 col-sm-2">
           <ul class="nav main-menu">
             <li>
-              <a href="index2.html" class="active ajax-link">
+              <a href="">
                 <i class="fa fa-dashboard"></i>
                 <span class="hidden-xs">Inicio</span>
               </a>
@@ -132,10 +134,9 @@
                 <span class="hidden-xs">Cadastros</span>
               </a>
               <ul class="dropdown-menu">
-                <li><a class="ajax-link" href="{% static "cliente.html" %}">Clientes</a></li>
-                <li><a class="ajax-link" href="{% static "produto.html" %}">Produtos</a></li>
-                <li><a class="ajax-link" href="produto">Produtos OK</a></li>
-                <li><a class="ajax-link" href="{% static "pedido.html" %}">Pedidos</a></li>
+                <li><a class="ajax-link" href="clientes">Clientes</a></li>
+                <li><a class="ajax-link" href="produtos">Produtos</a></li>
+                <li><a class="ajax-link" href="pedidos">Pedidos</a></li>
               </ul>
             </li>
           </ul>
@@ -151,13 +152,11 @@
     </div>
 
     <script src="{% static "plugins/jquery/jquery-2.1.0.min.js" %}"></script>
-<!--
     <script src="{% static "plugins/jquery-ui/jquery-ui.min.js" %}"></script>
     <script src="{% static "plugins/bootstrap/bootstrap.min.js" %}"></script>
     <script src="{% static "plugins/justified-gallery/jquery.justifiedgallery.min.js" %}"></script>
     <script src="{% static "plugins/tinymce/tinymce.min.js" %}"></script>
     <script src="{% static "plugins/tinymce/jquery.tinymce.min.js" %}"></script>
--->
     <script src="{% static "js/devoops.js" %}"></script>
 
   </body>

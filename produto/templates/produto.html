@@ -1,48 +1,34 @@
 {% block content %}
+<form action="." method="post">
+    <div class="box">
+        <div class="box-content">
+            <h4 class="page-header">Produtos</h4>
+            <form class="form-horizontal" role="form">
+            <table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-3">
+                <thead>
+                    <tr>
+                        <th>ID</th>
+                        <th>Descrição</th>
+                        <th>Tamanho</th>
+                        <th>Cor</th>
+                        <th>Editar</th>
+                    </tr>
+                </thead>
 
-<div class="row">
-    <div id="breadcrumb" class="col-md-12">
-        <ol class="breadcrumb">
-            <li><a href="index.html">Inicio</a></li>
-        </ol>
-    </div>
-</div>
-
-<form action="." method="post">{% csrf_token %}
-    <div class="row">
-        <div class="col-xs-12 col-sm-12">
-            <div class="box">
-                <div class="box-content">
-                    <h4 class="page-header">Produtos</h4>
-                    <form class="form-horizontal" role="form">
-                    <table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-3">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Descrição</th>
-                                <th>Tamanho</th>
-                                <th>Cor</th>
-                                <th>Editar</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-
-                        {% if produtos %}
-                            {% for produto in produtos %}
-                                <tr>
-                                    <td>{{ produto.idProduto }}</td>
-                                    <td>{{ produto.deProduto }}</td>
-                                    <td>{{ produto.idTamanho.deTamanho }}</td>
-                                    <td>{{ produto.deCor }}</td>
-                                    <td><a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a></td>
-                                    </tr>
-                            {% endfor %}
-                        {% endif %}
-
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+                <tbody>
+                {% if produtos %}
+                    {% for produto in produtos %}
+                        <tr>
+                            <td>{{ produto.idProduto }}</td>
+                            <td>{{ produto.deProduto }}</td>
+                            <td>{{ produto.idTamanho.deTamanho }}</td>
+                            <td>{{ produto.deCor }}</td>
+                            <td><a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a></td>
+                        </tr>
+                    {% endfor %}
+                {% endif %}
+                </tbody>
+            </table>
         </div>
     </div>
 </form>
