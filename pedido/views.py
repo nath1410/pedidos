@@ -1,3 +1,14 @@
 # -*- coding: utf-8 -*-
-# Create your views here.
+from django.shortcuts import render
+from django.http import HttpResponse
+from pedido.models import Pedido
 
+
+def pedidos(request):
+    pedidos = Pedido.objects.all()
+
+    return render(request, 'pedidos.html',
+        {
+            'pedidos': pedidos,
+        }
+    )
