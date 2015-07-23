@@ -10,6 +10,9 @@ class Produto(models.Model):
         deCor = models.CharField(max_length = 20)
         idUnidade = models.ForeignKey('Unidade')
 
+        def __unicode__(self):
+                return self.idProduto
+
 class Unidade(models.Model):
 
         idUnidade  = models.CharField(primary_key = True, max_length = 3)
@@ -17,7 +20,13 @@ class Unidade(models.Model):
         idUnidadeConversao = models.ForeignKey('self')
         nuTaxaConversao = models.FloatField()
 
+        def __unicode__(self):
+                return self.idUnidade
+
 class Tamanho(models.Model):
 
         idTamanho = models.CharField(primary_key = True, max_length = 3)
         deTamanho = models.CharField(max_length = 20)
+
+        def __unicode__(self):
+                return self.idTamanho
