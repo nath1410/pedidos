@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 from django.shortcuts import render
 from django.http import HttpResponse
-from pessoa.models import Cliente
-from pessoa.models import Vendedor
+from .models import Cliente
+from .models import Vendedor
 
 
 def clientes(request):
@@ -13,6 +13,7 @@ def clientes(request):
             'clientes': clientes,
         }
     )
+
 
 def vendedores(request):
     vendedores = Vendedor.objects.all()

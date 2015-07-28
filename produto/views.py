@@ -3,11 +3,12 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from django.template.loader import render_to_string
 from django.views.generic import UpdateView
-from produto.forms import ProdutoForm
-from produto.models import Produto
+from .forms import ProdutoForm
+from .models import Produto
 import logging
 
 logger = logging.getLogger(__name__)
+
 
 def produto(request):
     produtos = Produto.objects.all()
@@ -36,8 +37,9 @@ class ItemUpdateView(UpdateView):
         logger.error('form_valid')
         form.save()
         produto = Produto.objects.get(id=self.idProduto)
-        return HttpResponse(render_to_string('produtoFormSuccess.html', {'produto': produto}))
-        
+        return HttpResponse(render_to_string('produtoFormSuccess.html', 
+            {'produto': produto}))
+
     def get_context_data(self, **kwargs):
         logger.error('get_context_data')
         context = super(ItemUpdateView, self).get_context_data(**kwargs)
