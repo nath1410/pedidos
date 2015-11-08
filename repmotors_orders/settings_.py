@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# Django settings for pedidos project.
+# Django settings for repmotors_orders project.
 """
 Django settings for Despesas project.
 
@@ -44,9 +44,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'dashboard',
     'inicio',
-    'pedido',
-    'pessoa',
-    'produto',
+    'order',
+    'people',
+    'product',
 )
 
 # Local time zone for this installation. Choices can be found here:
@@ -108,17 +108,17 @@ MIDDLEWARE_CLASSES = (
     # 'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'pedidos.urls'
+ROOT_URLCONF = 'repmotors_orders.urls'
 
 # Python dotted path to the WSGI application used by Django's runserver.
-WSGI_APPLICATION = 'pedidos.wsgi.application'
+WSGI_APPLICATION = 'repmotors_orders.wsgi.application'
 
 TEMPLATE_DIR = (
     os.path.join(PROJECT_PATH, 'templates')
 )
 
 # A sample logging configuration. The only tangible logging
-# performed by this configuration is to send an email to
+# performed by this configuration is to send an mail to
 # the site admins on every HTTP 500 error when DEBUG=False.
 # See http://docs.djangoproject.com/en/dev/topics/logging for
 # more details on how to customize your logging configuration.

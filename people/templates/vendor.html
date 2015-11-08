@@ -2,7 +2,7 @@
 <form action="." method="post">
     <div class="box">
         <div class="box-content">
-            <h4 class="page-header">Clientes</h4>
+            <h4 class="page-header">Vendedores</h4>
             <form class="form-horizontal" role="form">
             <table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-3">
                 <thead>
@@ -17,14 +17,14 @@
                 </thead>
 
                 <tbody>
-                {% if clientes %}
-                    {% for cliente in clientes %}
+                {% if vendors %}
+                    {% for vendedor in vendors %}
                         <tr>
-                            <td>{{ cliente.idPessoa }}</td>
-                            <td>{{ cliente.dePessoa }}</td>
-                            <td>{{ cliente.nuTelefone }}</td>
-                            <td>{{ cliente.flAtivo }}</td>
-                            <td>{{ cliente.email }}</td>
+                            <td>{{ vendedor.idPessoa }}</td>
+                            <td>{{ vendedor.dePessoa }}</td>
+                            <td>{{ vendedor.nuTelefone }}</td>
+                            <td>{{ vendedor.flAtivo }}</td>
+                            <td>{{ vendedor.email }}</td>
                             <td><a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a></td>
                         </tr>
                     {% endfor %}

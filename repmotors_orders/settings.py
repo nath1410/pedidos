@@ -44,9 +44,9 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'dashboard',
     'inicio',
-    'pedido',
-    'pessoa',
-    'produto',
+    'order',
+    'people',
+    'product',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -58,9 +58,9 @@ MIDDLEWARE_CLASSES = (
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 )
 
-ROOT_URLCONF = 'pedidos.urls'
+ROOT_URLCONF = 'repmotors_orders.urls'
 
-WSGI_APPLICATION = 'pedidos.wsgi.application'
+WSGI_APPLICATION = 'repmotors_orders.wsgi.application'
 
 
 # Database
@@ -71,7 +71,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
         #'ENGINE': 'django.db.backends.mysql',
-        #'NAME': 'pedidos',
+        #'NAME': 'repmotors_orders',
         #'USER': 'root',
         #'PASSWORD': 'root',
         #'HOST': '',

@@ -1,22 +1,24 @@
 # -*- coding: utf-8 -*-
-from django.shortcuts import render
+import logging
+
 from django.http import HttpResponse
+from django.shortcuts import render
 from django.template.loader import render_to_string
 from django.views.generic import UpdateView
+
 from .forms import ProdutoForm
-from .models import Produto
-import logging
+from .models import Product
 
 logger = logging.getLogger(__name__)
 
 
-def produto(request):
-    produtos = Produto.objects.all()
+def product(request):
+    products = Product.objects.all()
 
-    logger.error('produto(request)')
-    return render(request, 'produto.html',
+    logger.error('product(request)')
+    return render(request, 'product.html',
         {
-            'produtos': produtos,
+            'products': products,
         }
     )
 
@@ -24,9 +26,9 @@ def produto(request):
 class ItemUpdateView(UpdateView):
 
     logger.error('ItemUpdateView')
-    model = Produto
+    model = Product
     form_class = ProdutoForm
-    template_name = 'produtoForm.html'
+    template_name = 'productForm.html'
 
     def dispatch(self, *args, **kwargs):
         logger.error('dispatch')
@@ -36,9 +38,9 @@ class ItemUpdateView(UpdateView):
     def form_valid(self, form):
         logger.error('form_valid')
         form.save()
-        produto = Produto.objects.get(id=self.idProduto)
-        return HttpResponse(render_to_string('produtoFormSuccess.html', 
-            {'produto': produto}))
+        produto = Product.objects.get(id=self.idProduto)
+        return HttpResponse(render_to_string('productFormSuccess.html',
+            {'product': produto}))
 
     def get_context_data(self, **kwargs):
         logger.error('get_context_data')

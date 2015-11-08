@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 import logging
+
 from django import forms
-from .models import Produto
+
+from .models import Product
 
 logger = logging.getLogger(__name__)
 
@@ -12,11 +14,11 @@ class ProdutoForm(forms.Form):
         logger.error('form __init__')
         super(ProdutoForm, self).__init__(*args, **kwargs)
         logger.error('form __init__ 1')
-        deProduto = forms.CharField(label='DescricaoProduto', max_length=200)
-        deCor = forms.CharField(max_length = 20)
-        #self.fields['deProduto'].widget.attrs['class'] = 'calendar'
+        name = forms.CharField(label='DescricaoProduto', max_length=200)
+        color = forms.CharField(max_length = 20)
+        #self.fields['name'].widget.attrs['class'] = 'calendar'
 
     class Meta:
         logger.error('form Meta')
-        model = Produto
+        model = Product
         fields = '__all__'

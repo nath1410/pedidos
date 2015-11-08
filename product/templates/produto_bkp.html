@@ -2,25 +2,27 @@
 <form action="." method="post">
     <div class="box">
         <div class="box-content">
-            <h4 class="page-header">Pedidos</h4>
+            <h4 class="page-header">Produtos</h4>
             <form class="form-horizontal" role="form">
             <table class="table table-bordered table-striped table-hover table-heading table-datatable" id="datatable-3">
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Cliente</th>
-                        <th>Vendedor</th>
+                        <th>Descrição</th>
+                        <th>Size</th>
+                        <th>Cor</th>
                         <th>Editar</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                {% if pedidos %}
-                    {% for pedido in pedidos %}
+                {% if produtos %}
+                    {% for product in produtos %}
                         <tr>
-                            <td>{{ pedido.idPedido }}</td>
-                            <td>{{ pedido.idCliente.dePessoa }}</td>
-                            <td>{{ pedido.idVendedor.dePessoa }}</td>
+                            <td>{{ product.idProduto }}</td>
+                            <td>{{ product.deProduto }}</td>
+                            <td>{{ product.idTamanho.deTamanho }}</td>
+                            <td>{{ product.deCor }}</td>
                             <td><a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a></td>
                         </tr>
                     {% endfor %}

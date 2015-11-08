@@ -1,15 +1,13 @@
 # -*- coding: utf-8 -*-
 from django.db import models
-from pedido.models import Pedido
-from produto.models import Produto, Unidade
 
 
 # Create your models here.
 class Item(models.Model):
 
-        idPedido = models.ForeignKey(pedido.models.Pedido, primary_key=True)
-        idItem = models.AutoField(primary_key=True)
-        idProduto = models.ForeignKey(produto.models.Produto)
-        idUnidade = models.ForeignKey(produto.models.Unidade)
-        nuQuantidade = models.IntegerField()
-        deObservacao = models.CharField(max_length=1000)
+        id = models.AutoField(primary_key=True)
+        order = models.ForeignKey(order.models.Order, primary_key=True)
+        product = models.ForeignKey(product.models.Product)
+        unit = models.ForeignKey(product.models.Unit)
+        quantity = models.IntegerField()
+        observation = models.CharField(max_length=1000)

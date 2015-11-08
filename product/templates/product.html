@@ -18,23 +18,23 @@
                     <tr>
                         <th>ID</th>
                         <th>Descrição</th>
-                        <th>Tamanho</th>
+                        <th>Size</th>
                         <th>Cor</th>
                         <th>Editar</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                {% if produtos %}
-                    {% for produto in produtos %}
+                {% if products %}
+                    {% for product in products %}
                         <tr>
-                            <td>{{ produto.idProduto }}</td>
-                            <td>{{ produto.deProduto }}</td>
-                            <td>{{ produto.idTamanho.deTamanho }}</td>
-                            <td>{{ produto.deCor }}</td>
+                            <td>{{ product.id }}</td>
+                            <td>{{ product.name }}</td>
+                            <td>{{ product.size.name }}</td>
+                            <td>{{ product.color }}</td>
                             <td>
                                 <!--<a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a> -->
-                                <a href="{% url 'produtoForm' produto.idProduto %}" data-target="#modal" class="fa fa-pencil" title="edit item" data-tooltip></a>
+                                <a href="{% url 'produtoForm' product.id %}" data-target="#modal" class="fa fa-pencil" title="edit item" data-tooltip></a>
                             </td>
                         </tr>
                     {% endfor %}
