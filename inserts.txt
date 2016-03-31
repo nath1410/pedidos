@@ -1,0 +1,43 @@
+insert into inicio_contry values (1, 'Brasil');
+
+insert into inicio_state values ('PR', 'Paraná', 1, 46);
+insert into inicio_state values ('SC', 'Santa Catarina', 1, 48);
+insert into inicio_state values ('RS', 'Rio Grande do Sul', 1, 56);
+
+insert into inicio_city values (1, 'PR', 'Curitiba', 1234);
+insert into inicio_city values (2, 'SC', 'Florianópolis', 5678);
+insert into inicio_city values (3, 'RS', 'Porto Alegre', 9012);
+
+insert into product_size values ('P', 'Pequeno');
+insert into product_size values ('M', 'Médio');
+insert into product_size values ('G', 'Grande');
+
+insert into product_unit values ('UN', 'Unidade', 'UN', 1);
+insert into product_unit values ('CX', 'Cauxa', 'UN', 10);
+
+insert into product_product values (1, 'Camiseta VR46', 'P', 'Preto', 'UN');
+insert into product_product values (2, 'Camiseta VR46', 'M', 'Preto', 'UN');
+insert into product_product values (3, 'Camiseta MM93', 'P', 'Branco', 'UN');
+insert into product_product values (4, 'Caixa camiseta VR46', 'M', 'Preto', 'CX');
+
+insert into people_address values (1, 'Rua das Aráras', '', 245, '88012452', 'Centro', 1);
+insert into people_address values (2, 'Rua das Andorinhas', '', 12, '8803321', 'Santo Amaro', 2);
+insert into people_address values (3, 'Avenida Luiz Boiteaux Piazza', 'Condomínio Blasche, Casa 15', 4410, '88056000', 'Ponta das Canas', 2);
+insert into people_address values (4, 'Travesa Atravesada', '', 210, '86541251', 'Centro', 3);
+
+insert into people_customer values (1, 'Cliente 1', '103817161', '06462811943', '', '4896894016', 'nathan.lusa@gmail.com', datetime('now'), date('now'), 1, 1, 10);
+insert into people_customer values (2, 'Cliente 2', '308845164', '16442411603', '', '4696192035', 'cliente2@gmail.com', datetime('now'), date('now'), 2, 1, 15);
+
+insert into people_vendor values (1, 'Vendedor 1', '103817161', '06462811943', '', '4896894016', 'nathan.lusa@gmail.com', datetime('now'), date('now'), 3, 1, 2);
+insert into people_vendor values (2, 'Vendedor 2', '308845164', '16442411603', '', '4696192035', 'cliente2@gmail.com', datetime('now'), date('now'), 4, 1, 1.5);
+
+insert into order_order values (1, 1, 2);
+insert into order_order values (2, 2, 2);
+insert into order_order values (3, 1, 1);
+insert into order_order values (4, 1, 1);
+
+insert into item_item values (1, 1, 1, 8, '8 Camisetas');
+insert into item_item values (2, 1, 2, 5, '5 Camisetas');
+insert into item_item values (3, 2, 1, 18, '18 Camisetas');
+insert into item_item values (4, 3, 3, 10, '10 Camisetas');
+insert into item_item values (5, 3, 4, 1, '10 Camisetas');
