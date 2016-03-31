@@ -34,7 +34,10 @@
                             <td>{{ product.color }}</td>
                             <td>
                                 <!--<a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a> -->
-                                <a href="{% url 'produtoForm' product.id %}" data-target="#modal" class="fa fa-pencil" title="edit item" data-tooltip></a>
+                                <!--<a class="ajax-link" href="{% url 'products_form' product.id %}" data-target="#modal" title="edit item"></a> -->
+                                <!--<a class="fa fa-pencil" title="edit item" data-tooltip></a> -->
+
+                                <a class="ajax-link" href="{% url 'products_form' product.id %}" data-target="#modal" title="edit item">Teste</a>
                             </td>
                         </tr>
                     {% endfor %}

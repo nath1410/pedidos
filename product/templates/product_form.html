@@ -1,0 +1,14 @@
+<form action="{% url 'products_form' product.id %}" method="POST">
+    {% csrf_token %}
+    <br>
+    {% for field in form %}
+        <div class="fieldWrapper">
+            {{ field.errors }}
+            {{ field.label_tag }} {{ field }}
+            {% if field.help_text %}
+            <p class="help">{{ field.help_text|safe }}</p>
+            {% endif %}
+        </div>
+    {% endfor %}
+    <input type="submit" value="Submit"/>
+</form>

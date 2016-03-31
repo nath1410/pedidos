@@ -4,11 +4,7 @@ from django.shortcuts import render
 from .models import Order
 
 
-def pedidos(request):
-    pedidos = Order.objects.all()
+def orders(request):
+    orders = Order.objects.all()
 
-    return render(request, 'order.html',
-        {
-            'repmotors_orders': pedidos,
-        }
-    )
+    return render(request, 'order.html', {'orders': orders})

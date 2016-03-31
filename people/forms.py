@@ -2,10 +2,10 @@
 
 from django.forms import ModelForm
 
-from .models import Product
+from .models import Customer
 
 
-class ProductForm(ModelForm):
+class CustomerForm(ModelForm):
     class Meta:
-        model = Product
+        model = Customer
         fields = '__all__'

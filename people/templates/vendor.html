@@ -18,13 +18,13 @@
 
                 <tbody>
                 {% if vendors %}
-                    {% for vendedor in vendors %}
+                    {% for vendor in vendors %}
                         <tr>
-                            <td>{{ vendedor.idPessoa }}</td>
-                            <td>{{ vendedor.dePessoa }}</td>
-                            <td>{{ vendedor.nuTelefone }}</td>
-                            <td>{{ vendedor.flAtivo }}</td>
-                            <td>{{ vendedor.email }}</td>
+                            <td>{{ vendor.id }}</td>
+                            <td>{{ vendor.name }}</td>
+                            <td>{{ vendor.phone }}</td>
+                            <td>{{ vendor.active }}</td>
+                            <td>{{ vendor.mail }}</td>
                             <td><a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a></td>
                         </tr>
                     {% endfor %}

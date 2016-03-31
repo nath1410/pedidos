@@ -8,19 +8,19 @@
                 <thead>
                     <tr>
                         <th>ID</th>
-                        <th>Customer</th>
-                        <th>Vendor</th>
+                        <th>Cliente</th>
+                        <th>Vendedor</th>
                         <th>Editar</th>
                     </tr>
                 </thead>
 
                 <tbody>
-                {% if pedidos %}
-                    {% for pedido in pedidos %}
+                {% if orders %}
+                    {% for order in orders %}
                         <tr>
-                            <td>{{ pedido.idPedido }}</td>
-                            <td>{{ pedido.idCliente.dePessoa }}</td>
-                            <td>{{ pedido.idVendedor.dePessoa }}</td>
+                            <td>{{ order.id }}</td>
+                            <td>{{ order.customer.name }}</td>
+                            <td>{{ order.vendor.name }}</td>
                             <td><a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a></td>
                         </tr>
                     {% endfor %}

@@ -18,14 +18,14 @@
 
                 <tbody>
                 {% if customers %}
-                    {% for cliente in customers %}
+                    {% for customer in customers %}
                         <tr>
-                            <td>{{ cliente.idPessoa }}</td>
-                            <td>{{ cliente.dePessoa }}</td>
-                            <td>{{ cliente.nuTelefone }}</td>
-                            <td>{{ cliente.flAtivo }}</td>
-                            <td>{{ cliente.email }}</td>
-                            <td><a href="http://debian.org" target="_blank"><i class="fa fa-cog"></i></a></td>
+                            <td>{{ customer.id }}</td>
+                            <td>{{ customer.name }}</td>
+                            <td>{{ customer.phone }}</td>
+                            <td>{{ customer.active }}</td>
+                            <td>{{ customer.mail }}</td>
+                            <td><a class="ajax-link" href="{% url 'customers_form' customer.id %}" target="_blank"><i class="fa fa-cog"></i></a></td>
                         </tr>
                     {% endfor %}
                 {% endif %}
